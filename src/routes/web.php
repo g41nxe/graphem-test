@@ -14,5 +14,5 @@
 //Auth::routes();
 
 Route::get('/', 'SpaController@index');
-Route::get('/home', 'SpaController@index');
-Route::get('/example', 'SpaController@index');
+Route::get('/myheroes', 'SpaController@index');
+Route::get('/myheroes/createhero', 'SpaController@index');

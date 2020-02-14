@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Example from './views/Example.vue';
-import Home from './views/Home.vue';
+import Teams from './views/Teams.vue';
+import HeroForm from './views/HeroForm.vue';
 
 Vue.use(VueRouter)
 
@@ -12,18 +13,15 @@ const routes = [
         redirect: '/home' 
     },
     {
-        name: 'home',
-        path: '/home',
-        component: Home
+        name: 'myheroes',
+        path: '/myheroes',
+        component: Teams
     },
     {
-        name: 'example',
-        path: '/example',
-        component: Example,
-        props: {
-            id: 0
-        }
-    }
+        name: 'createhero',
+        path: '/myheroes/createhero',
+        component: HeroForm
+    },
 ]
 
 const router = new VueRouter({
