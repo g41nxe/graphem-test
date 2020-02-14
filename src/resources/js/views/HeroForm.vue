@@ -13,14 +13,14 @@
           </b-form-group>
 
           <b-form-group id="input-group-3" label="Hit Points" label-for="input-3">
-            <b-form-input id="input-3" v-model="form.hitpoints" type="number" required placeholder="Enter a number"></b-form-input>
+            <b-form-input id="input-3" v-model="form.hit_points" type="number" required placeholder="Enter a number"></b-form-input>
           </b-form-group>
 
           <b-form-group id="input-group-4" label="Attack" label-for="input-4">
             <b-form-input id="input-4" v-model="form.attack" type="number" required placeholder="Enter a number"></b-form-input>
           </b-form-group>
 
-          <b-form-group id="input-group-5" label="Attack" label-for="input-5">
+          <b-form-group id="input-group-5" label="Special Ability" label-for="input-5">
             <b-form-input id="input-5" v-model="form.special_ability" type="text" required placeholder="Enter the name of your heros special ability"></b-form-input>
           </b-form-group>
 
@@ -44,7 +44,7 @@ export default {
         name: "",
         side: null,
         attack: 5,
-        hitpoints: 10,
+        hit_points: 10,
         special_ability: ""
       },
       sides: [{ text: 'Select One', value: null }, 'Dark', 'Light'],
@@ -63,7 +63,7 @@ export default {
       this.form.name = "",
       this.form.side = null,
       this.form.attack = 5,
-      this.form.hitpoints = 10,
+      this.form.hit_points = 10,
       this.form.special_ability = ""
 
       // Trick to reset/clear native browser form validation state

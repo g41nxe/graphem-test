@@ -28,11 +28,11 @@ class HeroController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name' => 'requierd|string',
+            'name' => 'required|string',
             'hit_points' => 'required|integer',
             'attack' => 'required|integer',
-            'side' => 'requierd|in:Dark,Light',
-            'special_ability' => 'required|text'
+            'side' => 'required|in:Dark,Light',
+            'special_ability' => 'required|string'
         ]);
 
         $hero = new Hero();
