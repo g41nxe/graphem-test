@@ -1,5 +1,9 @@
 let state = {
-    heroes: []
+    heroes: [],
+    teams: {
+        Dark: [],
+        Light: []
+    }
 }
 
 export default state

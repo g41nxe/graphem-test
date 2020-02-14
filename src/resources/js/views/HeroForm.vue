@@ -88,8 +88,7 @@ export default {
       evt.preventDefault();
       this.$store.dispatch('createHero', this.form).then(() => {
         this.message = `Successfully created new hero ${this.form.name}`;
-        
-        this.$emit('reset')
+                
       })
     },
     onReset(evt) {

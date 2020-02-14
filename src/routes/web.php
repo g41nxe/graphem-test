@@ -19,3 +19,4 @@
 Route::get('/', 'SpaController@index');
 Route::get('/myheroes', 'SpaController@index');
 Route::get('/myheroes/createhero', 'SpaController@index');
+Route::get('/myheroes/createteam', 'SpaController@index');

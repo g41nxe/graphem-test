@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Example from './views/Example.vue';
+import CreateTeam from './views/CreateTeam.vue';
 import Teams from './views/Teams.vue';
 import HeroForm from './views/HeroForm.vue';
 
@@ -22,6 +22,11 @@ const routes = [
         path: '/myheroes/createhero',
         component: HeroForm
     },
+    {
+        name: 'createteam',
+        path: '/myheroes/createteam',
+        component: CreateTeam
+    }
 ]
 
 const router = new VueRouter({

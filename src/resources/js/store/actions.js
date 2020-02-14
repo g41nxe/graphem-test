@@ -1,5 +1,13 @@
 let actions = {
 
+    addHeroToTeam({commit}, data) {
+        commit('ADD_HERO_TO_TEAM', data)
+    },
+    
+    removeHeroFromAnyTeam({commit}, hero) {
+        commit('REMOVE_HERO_FROM_ANY_TEAM', hero)
+    },
+
     createHero({commit}, hero) {
         axios.post('/api/myheroes/createhero', hero)
             .then(res => {
