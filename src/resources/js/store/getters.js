@@ -1,6 +1,6 @@
 let getters = {
-    pages: state => {
-        return state.pages
+    heroes: state => {
+        return state.heroes
     }
 }
 

@@ -55,7 +55,7 @@ export default {
   methods: {
     onSubmit(evt) {
       evt.preventDefault();
-      this.$store.dispatch('updatePage', this.form)
+      this.$store.dispatch('createHero', this.form)
     },
     onReset(evt) {
       evt.preventDefault();

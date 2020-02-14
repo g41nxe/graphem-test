@@ -13,5 +13,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::resource('pages', 'PageController')
-    ->except(['create', 'edit']);
+Route::get('myheroes', 'HeroController@index');
+Route::post('myheroes/createhero', 'HeroController@store');

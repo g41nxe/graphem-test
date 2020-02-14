@@ -1,37 +1,18 @@
 let actions = {
 
-    updatePage({commit}, page) {
-        axios.put(`/api/pages/${page.id}`, page)
+    createHero({commit}, hero) {
+        axios.post('/api/myheroes/createhero', hero)
             .then(res => {
-                commit('UPDATE_PAGE', res.data)
+                commit('CREATE_HERO', res.data)
             }).catch(err => {
             console.log(err)
         })
     },
 
-    createPage({commit}, page) {
-        axios.post('/api/pages', page)
+    fetchHeroes({commit}) {
+        axios.get('/api/myheroes')
             .then(res => {
-                commit('CREATE_PAGE', res.data)
-            }).catch(err => {
-            console.log(err)
-        })
-    },
-
-    deletePage({commit}, page) {
-        axios.delete(`/api/pages/${page.id}`)
-            .then(res => {
-                if (res.data === 'ok')
-                    commit('DELETE_PAGE', page)
-            }).catch(err => {
-            console.log(err)
-        })
-    },
-
-    fetchPages({commit}) {
-        axios.get('/api/pages')
-            .then(res => {
-                commit('FETCH_PAGES', res.data)
+                commit('FETCH_HEROES', res.data)
             }).catch(err => {
             console.log(err)
         })

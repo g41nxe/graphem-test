@@ -1,7 +1,5 @@
 let state = {
-    images: [],
-    texts: [],
-    pages: [],
+    heroes: []
 }
 
 export default state
